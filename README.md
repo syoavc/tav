@@ -217,10 +217,9 @@ Creating your own configuration files:
 
 - That is, in this example, the three files (for subject #4) are located in folder "4," which is in folder "mapping" and so on: 
 
-C:\\Users\\Liat\\Research\\DAAP\\Mapping\\04
+**C:\\Users\\Liat\\Research\\DAAP\\Mapping\\04**
 
-- 
-  - Each row ends with the name of the specific file that will be used: 04 - DAAP.txt, 04DAAPSMT, 04DAAPRAW 
+- Each row ends with the name of the specific file that will be used: 04 - DAAP.txt, 04DAAPSMT, 04DAAPRAW 
 
 - Thus, in order to adapt the configuration file to your needs, you would have to change the location of the three files and their names.
 - The fourth row specifies the location and name of the html file that the code will produce – the file that shows the visualized narrative (i.e., font size, style, and color), which represent the measures and the levels you chose. As with the first three rows, you need to change the location and name of file according to your own needs.
@@ -230,6 +229,7 @@ C:\\Users\\Liat\\Research\\DAAP\\Mapping\\04
 
 In the example below, for DF, segments that represent DF that is below .09 are considered low DF, above .115 – are high DF, and in between – are average DF.
 
+```python
 "cond":     [
 
             ["DF(S1)", 0.090, 0.115],
@@ -237,11 +237,13 @@ In the example below, for DF, segments that represent DF that is below .09 are c
                 ["WRAD(S1)", 0.398, 0.500],
 
                 ["R(S1)", 0.060, 0.102]
+```
 
 - Thus, you would need to change the measures and their thresholds accordingly. 
 
 - The next segment in the analyze.py file determines the specific combination of levels that interests you for which the code will produce numerical data: 
 
+```python
 "stats": {
 
     "R(S1)": 2,
@@ -249,6 +251,7 @@ In the example below, for DF, segments that represent DF that is below .09 are c
     "DF(S1)": 1,
 
          "WRAD(S1)": 2
+```
 
 0= low level, 1=average level, 2=high level
 
@@ -276,7 +279,7 @@ In PC, in order to paste commands into this window need to use: right click. In 
 - The commands you would need are as follows:
 
 **PC version:** 
-
+```
 cd C:\Users\Liat\DAAP\Mapping
 
 python analyze.py --conf
@@ -286,9 +289,10 @@ C:\Users\Liat\ DAAP\Mapping\01\conf01\_LDF\_AR\_HWRAD.txt --debug
 python analyze.py --conf
 
 C:\Users\Liat\DAAP\Mapping\01\conf01\_LDF\_AR\_HWRAD.txt --stats-only
+```
 
 **Mac version:**
-
+```
 cd /Users/Liat/ DAAP/Mapping
 
 python analyze.py --conf
@@ -298,21 +302,25 @@ python analyze.py --conf
 python analyze.py --conf
 
 /Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --stats-only
-
+```
 
 
 **Adapting the commands to your study:**
 
-**The first command** : cd /Users/Liat/ DAAP/Mapping
+**The first command** : 
+
+```
+cd /Users/Liat/ DAAP/Mapping
+```
 
 - This command specifies the location of the "analyze.py" file. You would have to change the location accordingly (In the above example, the "analyze.py" file is located in the folder Mapping, which is located on drive C, in folder "Liat," which is in folder "Users.)" 
 - Each time you begin working with the terminal window you have to begin with the first command to change the directory to the location of the analyze.py file. 
 
 **The second command ("debug"):**
 
-python analyze.py --conf
-
-/Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --debug
+```
+python analyze.py --conf /Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --debug
+```
 
 - You would have to run this command only once for each subject/ narrative at the beginning (after running the first command) prior to running the third command.
 - The specific combination (i.e., name of configuration file) you use for the debug command (in the above example – Low DF, Average Ref, High WRAD) does not matter as long as it corresponds to an existing configuration file that you had created. 
@@ -324,9 +332,9 @@ Once the two columns correspond, you can move to the third command.
 
 **Third command ("stats"):**
 
-python analyze.py --conf
-
-/Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --stats-only
+```
+python analyze.py --conf /Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --stats-only
+```
 
 - This command produces the statistics described above according to the different specification in the respective configuration file. Notice that the last part of the location in the command is the name of the specific configuration file. That is you would run this command for each of the configuration file, each time changing the command the name of the configuration file. 
 
@@ -337,11 +345,11 @@ The configuration file was named: conf01\_LDF\_AR\_HWRAD.txt
 What the name signifies is that it is the configuration file for subject # 01 for the combination of Low DF, Average Ref, and High WRAD. That is, the numbers that will be produced for this configuration file will show the total number of how words (and their percentage) in the narrative that represent this specific combination. In addition, the number and percentage of words that are in segments of 50 words or more and represent this combination will also be produced.
 
 For example, the output would be:
-
+```
 Number of words after filtering: 364 (2.94903994167%)
 
 Number of words after filtering, of groups of 50 and more: 62 (0.502309001053%)
-
+```
 This means that 364 words in the narrative represent the above combination, constituting 3% of the narrative. Out of the 364, 62 words constitute a segment of 50 words or more, which means in this case 1 segment. 
 
 As mentioned above, you would adapt and run the "stats" command for each subject and for all the configuration files that you created.
