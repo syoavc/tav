@@ -1,6 +1,8 @@
-**Text Analysis and Visualization System – A Manual**
+#TAV: Text Analysis and Visualization System
 
-Written by Liat Tsuman-Caspi, PhD
+The Discourse Attributes Analysis Program ([DAAP](https://github.com/DAAP/DAAP09.6)) is a computer-based text analysis system designed by Willma Bucci and Bernard Maskit, whose features include the use of both weighted and unweighted dictionaries and whose output includes measures based on an exponential smoothing operator.
+
+The Text Analysis and Visualization (TAV) system lets the DAAP user to visualize the linguistic data that DAAP produces and superimposes it on the original text. In addition, the system produces useful statistics about the frequency of certain linguistic styles.
 
 **What can you do with the Text Analysis and Visualization (TAV) system?**
 
@@ -30,13 +32,7 @@ The visualized text will be produced as an HTML file.
 
 For example, the following short segment is marked for low, average, and high levels of WRAD (font style), REF (color), and DF (font size):
 
-High WRAD, Average WRAD, _Low WRAD_
-
-High Ref, Ave Ref, Low Ref
-
-High DF, Ave Ref, Low Ref
-
-Mm I really didn't have many encounters mm previous to this year mm with supervisors, for instance, who didn't come from an educated urban background. So I feel like my even notions of of being and and my worldview was actually so different from my supervisors, and due to the power differential, at times when I would try to express mm how I was seeing things a little differently, mostly to just share, I felt like a lot of times it was either marginalized, overlooked or not understood. Like not understood as being relevant to _the conversation, and I think you know I can understand that._
+![example](https://github.com/syoavc/tav/blob/master/example.png)
 
 In this example, you can see that the segment begins with high DF, low Ref, and average WRAD, changes to high WRAD, and average Ref and DF, and ends with high Ref, Low DF and average to low WRAD.
 
@@ -89,11 +85,9 @@ For a more elaborated description of the DAAP's files and transcription rules, p
 
 **Example:** you are interested in looking at the different combinations of high and low levels of REF and WRAD and you have 2 subjects. You decided to use the subjects' own means and SD's to determine levels of REF and the general norms to determine levels of WRAD. You further decided that 1 SD above and below the mean would signify high and low levels, respectively.
 
-1. 
-  1. 
-    1. Subject 1: mean Ref= .093, SD= .026
-    2. Subject 2: mean Ref= .081, SD= .017
-    3. Norms for WRAD: mean WRAD= .45, SD: .04
+1. Subject 1: mean Ref= .093, SD= .026
+2. Subject 2: mean Ref= .081, SD= .017
+3. Norms for WRAD: mean WRAD= .45, SD: .04
 
 | Subject | Low Ref | High Ref | Low WRAD | High WRAD |
 | --- | --- | --- | --- | --- |
@@ -111,19 +105,19 @@ For a more elaborated description of the DAAP's files and transcription rules, p
 
 For example, for subject # 01, you may have the following files:
 
-01.txt (narrative for subject 1)
+* 01.txt (narrative for subject 1)
 
-01DAAPSMT.csv
+* 01DAAPSMT.csv
 
-01DAAPRAW.csv.
+* 01DAAPRAW.csv.
 
 For subject #2, you would have the following files:
 
-02.txt,
+* 02.txt,
 
-02DAAPSMT.csv 
+* 02DAAPSMT.csv 
 
-02DAAPRAW.csv 
+* 02DAAPRAW.csv 
 
 1. In addition, each subject's folder would contain the specific configuration files for that subject: 
 
@@ -131,18 +125,17 @@ A configuration file is a text-format file. It determines the specific configura
 
 For example, if you wanted to focus on different combinations of high and low levels of REF and WRAD, you would have 4 configuration files, one for each of the following combinations of measures:
 
-1. 
-  1. High REF, High WRAD
-  2. High REF, Low WRAD
-  3. Low REF, High WRAD
-  4. Low REF, Low WRAD
+1. High REF, High WRAD
+2. High REF, Low WRAD
+3. Low REF, High WRAD
+4. Low REF, Low WRAD
 
 The following are PC and Mac versions of the same configuration file, which you can use as a template to create your own configuration files according to the guidelines specified below: 
 
 **Configuration files:**
 
 **PC version:**
-
+```python
 {
 
     "text\_file": "C:\\Users\\Liat\\Research\\DAAP\\Mapping\\04\\04 - DAAP.txt",
@@ -176,9 +169,10 @@ The following are PC and Mac versions of the same configuration file, which you 
     "consecutive\_threshold": 50
 
 }
+```
 
 **Mac Version:**
-
+```python
 {
 
     "text\_file": "/Users/Liat/Research/DAAP/Mapping/04/04 - DAAP.txt",
@@ -212,6 +206,7 @@ The following are PC and Mac versions of the same configuration file, which you 
     "consecutive\_threshold": 50   
 
 }
+```
 
 Creating your own configuration files:
 
