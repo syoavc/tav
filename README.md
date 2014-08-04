@@ -10,10 +10,7 @@ Three visual modes of representations are used to indicate low, average, and hig
 
 The three modes of representations are:
 
-- 
-  - 
-    - 
-      - Font style – for WRAD: 
+- Font style – for WRAD: 
 
   - Low WRAD = italics
   - Average WRAD = regular
