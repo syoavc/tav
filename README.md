@@ -281,27 +281,15 @@ In PC, in order to paste commands into this window need to use: right click. In 
 **PC version:** 
 ```
 cd C:\Users\Liat\DAAP\Mapping
-
-python analyze.py --conf
-
-C:\Users\Liat\ DAAP\Mapping\01\conf01\_LDF\_AR\_HWRAD.txt --debug
-
-python analyze.py --conf
-
-C:\Users\Liat\DAAP\Mapping\01\conf01\_LDF\_AR\_HWRAD.txt --stats-only
+python analyze.py --conf C:\Users\Liat\ DAAP\Mapping\01\conf01\_LDF\_AR\_HWRAD.txt --debug
+python analyze.py --conf C:\Users\Liat\DAAP\Mapping\01\conf01\_LDF\_AR\_HWRAD.txt --stats-only
 ```
 
 **Mac version:**
 ```
 cd /Users/Liat/ DAAP/Mapping
-
-python analyze.py --conf
-
-/Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --debug
-
-python analyze.py --conf
-
-/Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --stats-only
+python analyze.py --conf /Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --debug
+python analyze.py --conf /Users/Liat/DAAP/Mapping/01/conf01\_LDF\_AR\_HWRAD.txt --stats-only
 ```
 
 
