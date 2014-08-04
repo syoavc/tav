@@ -2,7 +2,7 @@
 
 The Discourse Attributes Analysis Program ([DAAP](https://github.com/DAAP/DAAP09.6)) is a computer-based text analysis system designed by Willma Bucci and Bernard Maskit, whose features include the use of both weighted and unweighted dictionaries and whose output includes measures based on an exponential smoothing operator.
 
-The Text Analysis and Visualization (TAV) system lets the DAAP user to visualize the linguistic data that DAAP produces and superimposes it on the original text. In addition, the system produces useful statistics about the frequency of certain linguistic styles.
+The Text Analysis and Visualization (TAV) system was originated by Liat Tsuman-Caspi, as part of her post-doctoral research with Professor Bucci. TAV lets the DAAP user to visualize the linguistic data that DAAP produces and superimposes it on the original text. In addition, the system produces useful statistics about the frequency of certain linguistic styles.
 
 **What can you do with the Text Analysis and Visualization (TAV) system?**
 
